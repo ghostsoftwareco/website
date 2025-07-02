@@ -2,12 +2,18 @@ import Image from "next/image";
 
 interface ProfileProps {
   name: string;
+  url: string;
   imageSrc: string;
 }
 
-export default function Profile({ name, imageSrc }: ProfileProps) {
+export default function Profile({ name, url, imageSrc }: ProfileProps) {
   return (
-    <div className="flex justify-center flex-col items-center">
+    <a
+      href={url}
+      rel="noopener noreferrer"
+      target="_blank"
+      className="flex justify-center flex-col items-center"
+    >
       <Image
         src={imageSrc}
         alt={`${name} Picture`}
@@ -18,6 +24,6 @@ export default function Profile({ name, imageSrc }: ProfileProps) {
       <h3 className="font-normal m-0 mt-3 sm:mt-4 md:mt-5 text-lg sm:text-xl">
         {name}
       </h3>
-    </div>
+    </a>
   );
 }

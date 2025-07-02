@@ -9,7 +9,7 @@ interface ProductProps {
   imageAlt: string;
   bgColor: string;
   accentColor: string;
-  link: string;
+  link?: string;
 }
 
 export default function Product({
@@ -44,15 +44,17 @@ export default function Product({
               <h3 className="m-0 text-2xl md:text-3xl lg:text-4xl text-white font-normal">
                 {title}
               </h3>
-              <p className="m-0 mt-1 text-white text-base md:text-lg font-[300]">
+              <p className="m-0 mt-1 text-white text-base md:text-lg font-[300] text-left">
                 {description}
               </p>
             </div>
           </div>
-          <FontAwesomeIcon
-            icon={faSquareArrowUpRight}
-            className="mr-4 md:mr-8 text-3xl md:text-4xl lg:text-5xl text-white"
-          />
+          {link && (
+            <FontAwesomeIcon
+              icon={faSquareArrowUpRight}
+              className="mr-4 md:mr-8 text-3xl md:text-4xl lg:text-5xl text-white"
+            />
+          )}
         </div>
       </div>
     </a>

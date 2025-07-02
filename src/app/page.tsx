@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWrench,
   faPersonRays,
@@ -22,7 +21,7 @@ export default function Home() {
           className="mx-auto mt-10 md:mt-20"
         />
 
-        <p className="text-3xl md:text-4xl lg:text-6xl text-[#383838] px-4 md:px-12 lg:px-24 leading-snug font-medium">
+        <p className="text-3xl md:text-4xl lg:text-6xl text-[#383838] px-4 md:px-12 lg:px-24 leading-tight font-medium">
           We&apos;re{" "}
           <span className="text-[#2361a3] font-bold no-underline ">
             Ghost Software.
@@ -65,26 +64,25 @@ export default function Home() {
           <Product
             title="ReStore"
             description="Backup your reMarkable, to your own cloud."
-            imageSrc="/assets/restore.png"
+            imageSrc="/assets/products/restore.png"
             imageAlt="ReStore"
-            bgColor="bg-[#3571c4]"
-            accentColor="bg-[#1e4b8b]"
+            bgColor="bg-[#398791]"
+            accentColor="bg-[#286068]"
             link="http://restore.ghostsoftware.co/"
           />
 
           <Product
             title="TrainSpotter"
             description="Never miss your train again. Coming soon."
-            imageSrc="/assets/trainspotter.png"
+            imageSrc="/assets/products/trainspotter.png"
             imageAlt="TrainSpotter Icon"
-            bgColor="bg-[#398791]"
-            accentColor="bg-[#286068]"
-            link="http://restore.ghostsoftware.co/"
+            bgColor="bg-[#3571c4]"
+            accentColor="bg-[#1e4b8b]"
           />
         </div>
       </section>
 
-      <section id="team" className="mt-10 md:mt-20">
+      <section id="team" className="my-10 md:my-20">
         <div className="p-2.5 pb-8 rounded-lg">
           <SectionTitle title="Who We Are" icon={faPersonRays} />
 
@@ -92,14 +90,17 @@ export default function Home() {
             <Profile
               name="Jacob Daitzman"
               imageSrc="/assets/profiles/jacob.jpg"
+              url="https://www.linkedin.com/in/jdtzmn/"
             />
             <Profile
               name="Shai Mann-Robison"
               imageSrc="/assets/profiles/shai.png"
+              url="https://www.linkedin.com/in/shai-mann-robison/"
             />
             <Profile
               name="Matan Kotler-Berkowitz"
               imageSrc="/assets/profiles/matan.png"
+              url="https://www.linkedin.com/in/matankb/"
             />
           </div>
         </div>
